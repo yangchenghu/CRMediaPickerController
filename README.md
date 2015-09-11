@@ -8,12 +8,15 @@ A easy-to-use `UIImagePickerController` replacement for picking Images and Video
 [![License](https://img.shields.io/cocoapods/l/CRMediaPickerController.svg?style=flat)](http://cocoadocs.org/docsets/CRMediaPickerController)
 
 <br />
+_2015-09-11 update_
+
+ 1. [x] fix `UIImagePickerController` can not get edited image.
+
+<br />
 <img src="http://chroman.me/wp-content/uploads/2015/01/CRMediaPickerController.png" width="621">
 
 
-_2015-09-11 update_
 
-- [*] fix `UIImagePickerController` can not get edited image.
 
 
 Overview
