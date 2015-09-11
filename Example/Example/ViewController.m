@@ -157,7 +157,7 @@
 
 #pragma mark - CPDMediaPickerControllerDelegate
 
-- (void)CRMediaPickerController:(CRMediaPickerController *)mediaPickerController didFinishPickingAsset:(ALAsset *)asset error:(NSError *)error
+- (void)CRMediaPickerController:(CRMediaPickerController *)mediaPickerController didFinishPickingAsset:(ALAsset *)asset image:(UIImage *)image error:(NSError *)error
 {
     if (!error) {
         
@@ -165,9 +165,15 @@
             
             if ([[asset valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto]) {
                 
-                ALAssetRepresentation *representation = asset.defaultRepresentation;
-                UIImage *image = [UIImage imageWithCGImage:representation.fullScreenImage];
-                self.imageView.image = image;
+                if (image) {
+                    self.imageView.image = image;
+                }
+                else {
+                    ALAssetRepresentation *representation = asset.defaultRepresentation;
+                    UIImage * newImage = [UIImage imageWithCGImage:representation.fullScreenImage];
+                    self.imageView.image = newImage;
+                }
+                
                 
             } else if ([[asset valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypeVideo]) {
                 

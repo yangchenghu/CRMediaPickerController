@@ -10,6 +10,12 @@ A easy-to-use `UIImagePickerController` replacement for picking Images and Video
 <br />
 <img src="http://chroman.me/wp-content/uploads/2015/01/CRMediaPickerController.png" width="621">
 
+
+_2015-09-11 update_
+
+- [*] fix `UIImagePickerController` can not get edited image.
+
+
 Overview
 -----
 Picking, taking, or using the last photo or video made easy!

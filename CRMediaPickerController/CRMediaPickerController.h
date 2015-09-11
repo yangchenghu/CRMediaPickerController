@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Christian Roman. All rights reserved.
 //
 
-@import UIKit;
-@import AssetsLibrary;
+#import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 typedef NS_OPTIONS(NSInteger, CRMediaPickerControllerMediaType) {
     CRMediaPickerControllerMediaTypeImage = 1 << 0,
@@ -26,7 +26,7 @@ typedef NS_OPTIONS(NSInteger, CRMediaPickerControllerSourceType) {
 @protocol CRMediaPickerControllerDelegate <NSObject>
 
 @optional
-- (void)CRMediaPickerController:(CRMediaPickerController *)mediaPickerController didFinishPickingAsset:(ALAsset *)asset error:(NSError *)error;
+- (void)CRMediaPickerController:(CRMediaPickerController *)mediaPickerController didFinishPickingAsset:(ALAsset *)asset image:(UIImage *)image error:(NSError *)error;
 - (void)CRMediaPickerControllerDidCancel:(CRMediaPickerController *)mediaPickerController;
 @end
 
